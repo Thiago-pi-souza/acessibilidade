@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/ico-16.ico">
+        <title>.: THIAGO SOUZA :.</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    </head>
+    <body id="inicio" onload="iniciarLocalStorage()">
+        <nav class="acessibilidade">
+            <ul id="atalhos">  
+                <li></li>
+                <li><a href="#inicio" id="acs-inicio" accesskey="1" title="Alt 1">Inicio</a></li>  
+                <li><a href="#sobre" accesskey="2" title="Alt 2">Ir sobre</a></li>  
+                <li><a href="#experiencia" accesskey="3" title="Alt 3">Ir experiência</a></li>  
+                <li><a href="#rodape" accesskey="4" title="Alt 4">Ir rodapé</a></li>  
+                <li class="bandeira" title="Seleção idiomas">
+                    <a href="#" language='portugues' class="ativo">PT</a>
+                    <a href="#" language='english'>EN</a>
+                    <a href="#" language='espanhol'>ES</a>
+                    <a href="#" language='deutsch'>AL</a>
+                </li>
+                <li>
+                    <div class="azul" title="Troca Cor Azul" aria-hidden="true"></div>
+                    <div class="vermelho" title="Troca Cor Vermelha" aria-hidden="true"></div>
+                    <div class="verde" title="Troca Cor Verde" aria-hidden="true"></div>
+                    <div class="marrom" title="Troca Cor Marrom" aria-hidden="true"></div>
+                </li>
+                <li>
+                    <div class="mais" title="Aumenta Fonte (ALT +)" aria-hiddnen="true" accesskey="+"></div>
+                    <div class="normal" title="Tamanho 100%" aria-hidden="true" accesskey="0"></div>
+                    <div class="menos" title="Diminui Fonte (ALT -)" aria-hiddnen="true" accesskey="-"></div>
+                    <div class="toggle" title="Contraste (ALT T)" aria-hiddnen="true" accesskey="T"></div>
+                </li>
+            </ul> 
+            <div vw class="enabled" title="Assistente de Libras">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                  <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>            
+        </nav>
+
+    </div>
+    <div id="gatsby-announcer" style="position: absolute; top: 0px; width: 1px; height: 1px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px none;" aria-live="assertive" aria-atomic="true"></div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+    
+      <script src="./js/funcoes.js"></script>
+      <script src="./js/lingua.js"></script>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        const sec = document.querySelector('.sec');
+        const acs = document.querySelector('.acessibilidade');
+        const rod = document.querySelector('.rodape');
+
+        const toggle = document.querySelector('.toggle');
+        const menos = document.querySelector('.menos');
+        const mais = document.querySelector('.mais');
+        const normal = document.querySelector('.normal');
+
+        const azul = document.querySelector('.azul');
+        const vermelho = document.querySelector('.vermelho');
+        const verde = document.querySelector('.verde');
+        const marrom = document.querySelector('.marrom');
+
+        toggle.onclick = function() {
+            sec.classList.toggle('dark');
+            acs.classList.toggle('dark');
+            rod.classList.toggle('dark');
+        }
+        mais.onclick = function() {
+            javascript:mudaTamanho('section', +1);
+        }
+        menos.onclick = function() {
+            javascript:mudaTamanho('section', -1);
+        }
+        normal.onclick = function() {
+            javascript:mudaTamanho('section', 0);
+        }
+
+        azul.onclick = function() {
+            javascript:mudaCor('azul');
+        }
+        vermelho.onclick = function() {
+            javascript:mudaCor('vermelho');
+        }
+        verde.onclick = function() {
+            javascript:mudaCor('verde');
+        }
+        marrom.onclick = function() {
+            javascript:mudaCor('marrom');
+        }
+
+    </script>
